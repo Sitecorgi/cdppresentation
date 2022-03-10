@@ -9,7 +9,7 @@
 		var _boxever_settings = {
 			client_key: 'psfu6uh05hsr9c34rptlr06dn864cqrx', 
 			target: 'https://api.boxever.com/v1.2', // Replace with your API target endpoint specific to your data center region
-			cookie_domain: 'budapestspabreakscdpdemo.website' // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
+			cookie_domain: '.budapestspabreakscdpdemo.website' // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
 	};
 		// Import the Boxever library asynchronously 
 		(function() {
@@ -18,6 +18,21 @@
 			 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 		})();
 	</script>
+	<script type="text/javascript">
+		(function () {
+		  _boxeverq.push(function () {
+			var viewEvent = {
+			  channel: "WEB",
+			  type: "VIEW",
+			  language: "EN",
+			  currency: "EUR",
+			  page: "Home",
+			  pos: "budapestspabreakscdpdemo.website",
+			  browser_id: Boxever.browser_id,
+			};
+		  });
+		})();
+	  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +41,7 @@
 Holiday Template
 http://www.templatemo.com/tm-475-holiday
 -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">  
@@ -294,7 +309,7 @@ http://www.templatemo.com/tm-475-holiday
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<p class="home-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="http://www.facebook.com/templatemo" target="_parent">contact us</a>. Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_parent">Unspash</a> for images used in this template.</p>					
+					<p class="home-description">Holiday is free Bootstrap v3.3.5 responsive template for tour and travel websites. You can download and use this layout for any purpose. You do not need to provide a credit link to us. If you have any question, feel free to <a href="https://www.facebook.com/templatemo" target="_parent">contact us</a>. Credit goes to <a rel="nofollow" href="https://unsplash.com" target="_parent">Unspash</a> for images used in this template.</p>					
 				</div>
 			</div>			
 		</div>
