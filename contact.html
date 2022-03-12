@@ -116,9 +116,7 @@ http://www.templatemo.com/tm-475-holiday
             <li>
               <img src="img/world-map.png" alt="image" class="contact-image" />
               <div class="contact-text">
-                <h2 class="slider-title">
-                  Budapest: Europe's Spa Destination
-                </h2>
+                <h2 class="slider-title">Budapest: Europe's Spa Destination</h2>
                 <h3 class="slider-subtitle">
                   Gravida nibh vel velit auctor aliquet enean sollicitudin lorem
                   quis auctor, nisi elit consequat ipsum
@@ -260,10 +258,13 @@ http://www.templatemo.com/tm-475-holiday
                   passport_no: "GB354545454",
                   mobile: "++441234567890",
                   phone: "+441234567890",
-                  ext: {
-                    SpaLoyaltyProgrammeLevel: 1,
-                    SpaLoyaltyCustomerType: "PLATINUM",
-                  },
+                  extensions: [
+                    {
+                    "name": "ext",
+                    "SpaLoyaltyProgrammeLevel": 1,
+                    "SpaLoyaltyCustomerType": "PLATINUM",
+                    }
+                  ],
                   identifiers: [
                     {
                       provider: "Custom_Identity_Server",
@@ -305,7 +306,6 @@ http://www.templatemo.com/tm-475-holiday
     <script type="text/javascript" src="js/templatemo-script.js"></script>
     <!-- Templatemo Script -->
     <script>
-
       // DOM is ready
       $(function () {
         // https://css-tricks.com/snippets/jquery/smooth-scrolling/
