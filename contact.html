@@ -96,10 +96,10 @@ http://www.templatemo.com/tm-475-holiday
           <li>
             <div class="tm-banner-inner">
               <h1 class="tm-banner-title">
-                Your <span class="tm-yellow-text">Special</span> Tour
+                Your <span class="tm-yellow-text">Spa</span> Break
               </h1>
-              <p class="tm-banner-subtitle">For Upcoming Holidays</p>
-              <a href="#more" class="tm-banner-link">Contact Us</a>
+              <p class="tm-banner-subtitle">For Special Offers and Discounts</p>
+              <a href="#more" class="tm-banner-link">Get in Touch</a>
             </div>
             <img src="img/banner-3.jpg" alt="Banner 3" />
           </li>
@@ -116,22 +116,25 @@ http://www.templatemo.com/tm-475-holiday
             <li>
               <img src="img/world-map.png" alt="image" class="contact-image" />
               <div class="contact-text">
-                <h2 class="slider-title">Lorem Isum Dolor</h2>
+                <h2 class="slider-title">
+                  Budapest: Europe's Spa Destination
+                </h2>
                 <h3 class="slider-subtitle">
                   Gravida nibh vel velit auctor aliquet enean sollicitudin lorem
                   quis auctor, nisi elit consequat ipsum
                 </h3>
                 <p class="slider-description">
-                  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt
-                  auctor a ornare odio. Sed non mauris vitae erat consequat
-                  auctor eu in elit. Class aptent taciti sociosqu ad litora
-                  torquent per conubia nostra, per inceptos himenaeos.
+                  Budapest offers everything from a historic old town, amazing
+                  architecture, coffee house culture, and amazing gastronomy.
+                  But perhaps it is most well-known for its thermal spas and
+                  baths plus an ancient healing culture. Budapest is a “City of
+                  Spas.” Spa tourism is very popular here.
                   <br /><br />
-                  Mauris in erat justo. Nullam ac urna eu felis dapibus
-                  condimentum sit amet a augue. Sed non neque elit. Sed ut
-                  imperdiet nisi. Proin condimentum fermentum nunc. Etiam
-                  pharetra, erat sed fermentum feugiat, velit mauris gestas
-                  quam, ut aliquam massa nisi.
+                  Did you know that there are approximately 1,500 mineral
+                  springs currently in use in Hungary today? Adhering to strict
+                  standards, Hungary boasts over two hundred water sources.
+                  Hydrotherapy and other treatments have a proven medicinal
+                  effect.
                 </p>
                 <div class="slider-social">
                   <a href="#" class="tm-social-icon"
@@ -258,8 +261,8 @@ http://www.templatemo.com/tm-475-holiday
                   mobile: "++441234567890",
                   phone: "+441234567890",
                   ext: {
-                    "SpaLoyaltyProgrammeLevel": 1,
-                    "SpaLoyaltyCustomerType": "PLATINUM" 
+                    SpaLoyaltyProgrammeLevel: 1,
+                    SpaLoyaltyCustomerType: "PLATINUM",
                   },
                   identifiers: [
                     {
@@ -287,7 +290,9 @@ http://www.templatemo.com/tm-475-holiday
     <footer class="tm-black-bg">
       <div class="container">
         <div class="row">
-          <p class="tm-copyright-text">Copyright &copy; 2084 Budapest Spa Breaks</p>
+          <p class="tm-copyright-text">
+            Copyright &copy; 2084 Budapest Spa Breaks
+          </p>
         </div>
       </div>
     </footer>
@@ -300,44 +305,6 @@ http://www.templatemo.com/tm-475-holiday
     <script type="text/javascript" src="js/templatemo-script.js"></script>
     <!-- Templatemo Script -->
     <script>
-      /* Google map
-      	------------------------------------------------*/
-      var map = "";
-      var center;
-
-      function initialize() {
-        var mapOptions = {
-          zoom: 14,
-          center: new google.maps.LatLng(37.769725, -122.462154),
-          scrollwheel: false,
-        };
-
-        map = new google.maps.Map(
-          document.getElementById("google-map"),
-          mapOptions
-        );
-
-        google.maps.event.addDomListener(map, "idle", function () {
-          calculateCenter();
-        });
-
-        google.maps.event.addDomListener(window, "resize", function () {
-          map.setCenter(center);
-        });
-      }
-
-      function calculateCenter() {
-        center = map.getCenter();
-      }
-
-      function loadGoogleMap() {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src =
-          "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&" +
-          "callback=initialize";
-        document.body.appendChild(script);
-      }
 
       // DOM is ready
       $(function () {
