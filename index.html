@@ -173,7 +173,9 @@ http://www.templatemo.com/tm-475-holiday
                         <select name="hotel" class="form-control">
                           <option value="">-- Select Spa Hotel --</option>
                           <option value="shangrila">Shangri-La</option>
-                          <option value="chatrium">Gellert Thermal Baths</option>
+                          <option value="chatrium">
+                            Gellert Thermal Baths
+                          </option>
                           <option value="fourseasons">Thermal Thoughts</option>
                           <option value="hilton">Tranquil Times</option>
                         </select>
@@ -540,39 +542,42 @@ http://www.templatemo.com/tm-475-holiday
     <!-- Templatemo Script -->
 
     <script>
+      function addBooking(event) {
+        event.preventDefault();
 
-      function addBooking(event){
-      	event.preventDefault();
-
-      _boxeverq.push(function () {
-      		var addEvent = {
-      		"channel":"WEB",
-      		"type":"ADD",
-      		"language":"EN",
-      		"currency":"EUR",
-      		"page":"home",
-      		"pos":"budapestspabreakscdpdemo.website",
-      		"browser_id": Boxever.browser_id,
-      		"product":{
-      			"type":"SPA",
-      			"item_id":"Gellert_Baths",
-      			"name":"Gellert Thermal Baths",
-      			"orderedAt":Date.now().toString(),
-      			"quantity":2,
-      			"price":1200.00,
-      			"productId":"GELLERT_BATHS",
-      			"currency":"EUR",
-      			"originalPrice":1200.00,
-      			"originalCurrencyCode":"EUR",
-      			"referenceId":"GELLERT"
-      		}
-		}
-	});
-	Boxever.eventCreate(addEvent, function (data) {}, "json");
-	console.log("add event sent")
-}
-	document.querySelector('#booknowbutton').addEventListener("submit", addBooking);
-
+        _boxeverq.push(function () {
+          var addEvent = {
+            channel: "WEB",
+            type: "ADD",
+            language: "EN",
+            currency: "EUR",
+            page: "home",
+            pos: "budapestspabreakscdpdemo.website",
+            browser_id: Boxever.browser_id,
+            product: {
+              type: "SPA",
+              item_id: "Gellert_Baths",
+              name: "Gellert Thermal Baths",
+              orderedAt: Date.now().toString(),
+              quantity: 2,
+              price: 1200.0,
+              productId: "GELLERT_BATHS",
+              currency: "EUR",
+              originalPrice: 1200.0,
+              originalCurrencyCode: "EUR",
+              referenceId: "GELLERT",
+            },
+          };
+          Boxever.eventCreate(addEvent, function (data) {}, "json");
+          console.log("add event sent");
+          window.location.replace(
+                "http://budapestspabreakscdpdemo.website"
+              );
+        });
+      }
+      document
+        .querySelector("#booknowbutton")
+        .addEventListener("click", addBooking);
     </script>
     <script>
       // HTML document is loaded. DOM is ready.
