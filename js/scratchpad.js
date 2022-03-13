@@ -15,7 +15,8 @@
             event.type === "ADD" &&
             event.arbitraryData &&
             event.arbitraryData.product &&
-            event.arbitraryData.product.price) {
+            event.arbitraryData.product.price
+          ) {
             output.totalPrice += event.arbitraryData.product.price;
             output.spaBreak = event.arbitraryData.product.name;
           }
@@ -26,5 +27,5 @@
     }
   }
 
-  
+  return output;
 })();
