@@ -580,7 +580,7 @@ http://www.templatemo.com/tm-475-holiday
     <script>
       function closeSession() {
         _boxeverq.push(function () {
-          var viewEvent = {
+          var abandonEvent = {
             type: "FORCE_CLOSE",
             browser_id: _boxever.getID(),
             channel: "WEB",
@@ -588,7 +588,8 @@ http://www.templatemo.com/tm-475-holiday
             pos: "budapestspabreakscdpdemo.website",
             _bx_extended_message: "1",
           };
-          _boxever.eventCreate(viewEvent, function (data) {}, "json");
+          Boxever.eventCreate(abandonEvent, function (data) {}, "json");
+          console.log("abandonEvent sent")
         });
       }
 
