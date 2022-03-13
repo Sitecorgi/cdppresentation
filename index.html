@@ -501,7 +501,7 @@ http://www.templatemo.com/tm-475-holiday
                   <a href="#" class="tm-home-box-2-link"
                     ><i class="fa fa-heart tm-home-box-2-icon border-right"></i
                   ></a>
-                  <a href="#" class="tm-home-box-2-link"
+                  <a href="#" class="tm-home-box-2-link" id="#force-close"
                     ><span class="tm-home-box-2-description box-3"
                       >Travel</span
                     ></a
@@ -553,7 +553,7 @@ http://www.templatemo.com/tm-475-holiday
             currency: "EUR",
             page: "home",
             pos: "budapestspabreakscdpdemo.website",
-            browser_id: Boxever.browser_id,
+            browser_id: Boxever.getID(),
             product: {
               type: "SPA",
               item_id: "Gellert_Baths",
@@ -570,14 +570,29 @@ http://www.templatemo.com/tm-475-holiday
           };
           Boxever.eventCreate(addEvent, function (data) {}, "json");
           console.log("add event sent");
-          window.location.replace(
-                "http://budapestspabreakscdpdemo.website"
-              );
+          window.location.replace("http://budapestspabreakscdpdemo.website");
         });
       }
       document
         .querySelector("#booknowbutton")
         .addEventListener("click", addBooking);
+    </script>
+    <script>
+      function closeSession() {
+        _boxeverq.push(function () {
+          var viewEvent = {
+            type: "FORCE_CLOSE",
+            browser_id: _boxever.getID(),
+            channel: "WEB",
+            page: home,
+            pos: "budapestspabreakscdpdemo.website",
+            _bx_extended_message: "1",
+          };
+          _boxever.eventCreate(viewEvent, function (data) {}, "json");
+        });
+      }
+
+      document.querySelector('#forceClose').addEventListener("click", closeSession);
     </script>
     <script>
       // HTML document is loaded. DOM is ready.
