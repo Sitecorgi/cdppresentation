@@ -588,10 +588,10 @@ http://www.templatemo.com/tm-475-holiday
             pos: "budapestspabreakscdpdemo.website",
             currency: "EUR",
             language:"EN"
-          };
-          Boxever.eventCreate(abandonEvent, function (data) {}, "json");
-          console.log("abandonEvent sent")
+          };        
         });
+        Boxever.eventCreate(abandonEvent, function (data) {}, "json");
+        console.log("abandonEvent sent")
       }
 
       document.querySelector('#force-close').addEventListener("click", closeSession);
