@@ -567,8 +567,12 @@ http://www.templatemo.com/tm-475-holiday
       			"referenceId":"GELLERT"
       		}
 		}
-          document.querySelector('#booknowbutton').addEventListener(addBooking);
-	}
+	});
+	Boxever.eventCreate(addEvent, function (data) {}, "json");
+	console.log("add event sent")
+}
+	document.querySelector('#booknowbutton').addEventListener(addBooking);
+
     </script>
     <script>
       // HTML document is loaded. DOM is ready.
