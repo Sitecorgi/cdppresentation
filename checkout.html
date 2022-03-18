@@ -111,7 +111,7 @@ http://www.templatemo.com/tm-475-holiday
         event.preventDefault();
 
         _boxeverq.push(function () {
-          var confirmEvent = {
+          var checkoutEvent = {
             type: "CHECKOUT",
             browser_id: Boxever.getID(),
             channel: "WEB",
@@ -123,12 +123,16 @@ http://www.templatemo.com/tm-475-holiday
 			"status": "PURCHASED"
           };
           
-          Boxever.eventCreate(abandonEvent, function (data) {}, "json");
+          Boxever.eventCreate(checkoutEvent, function (data) {}, "json");
         });
         console.log("abandonEvent sent");
+
+		window.location.replace(
+                "http://budapestspabreakscdpdemo.website"
+              );
       }
 
-      document.querySelector('#force-close').addEventListener("click", closeSession);
+      document.querySelector('#checkout').addEventListener("click", checkoutCart);
 	</script>
 	<!-- gray bg -->	
 	<section class="container tm-home-section-1" id="more">
