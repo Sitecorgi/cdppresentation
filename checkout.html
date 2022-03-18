@@ -110,6 +110,22 @@ http://www.templatemo.com/tm-475-holiday
 		function checkoutCart() {
         event.preventDefault();
 
+		_boxeverq.push(function () {
+			var confirmEvent = {
+				"channel": "WEB",
+				"type": "CONFIRM",
+				"language": "EN",
+				"currency": "EUR",
+				"page": "checkout",
+				"pos": "budapestspabreakscdpdemo.website",
+				"browser_id": Boxever.getID(),
+				"product": [{
+					"item_id": "GELLERT_BATHS"
+				}]
+			}
+		})
+		Boxever.eventCreate(confirmEvent, function (data) {}, "json");
+
         _boxeverq.push(function () {
           var checkoutEvent = {
             type: "CHECKOUT",
