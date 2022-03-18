@@ -112,14 +112,14 @@ http://www.templatemo.com/tm-475-holiday
 
 		_boxeverq.push(function () {
 			var confirmEvent = {
-				"channel": "WEB",
-				"type": "CONFIRM",
-				"language": "EN",
-				"currency": "EUR",
-				"page": "checkout",
-				"pos": "budapestspabreakscdpdemo.website",
-				"browser_id": Boxever.getID(),
-				"product": [{
+				channel: "WEB",
+				type: "CONFIRM",
+				language: "EN",
+				currency: "EUR",
+				page: "checkout",
+				pos: "budapestspabreakscdpdemo.website",
+				browser_id: Boxever.getID(),
+				product: [{
 					"item_id": "GELLERT_BATHS"
 				}]
 			}
@@ -136,8 +136,8 @@ http://www.templatemo.com/tm-475-holiday
             pos: "budapestspabreakscdpdemo.website",
             currency: "EUR",
             language:"EN",
-			"reference_id": "SPA" + getRandomInteger(1, 1000),
-			"status": "PURCHASED"
+			reference_id: "SPA" + getRandomInteger(1, 1000),
+			status: "PURCHASED"
           };
           
           Boxever.eventCreate(checkoutEvent, function (data) {}, "json");
