@@ -595,6 +595,9 @@ http://www.templatemo.com/tm-475-holiday
           Boxever.eventCreate(abandonEvent, function (data) {}, "json");
         });
         console.log("abandonEvent sent");
+        window.location.replace(
+                "http://budapestspabreakscdpdemo.website/checkout"
+              );
       }
 
       document.querySelector('#force-close').addEventListener("click", closeSession);
